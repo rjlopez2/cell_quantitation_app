@@ -1,29 +1,26 @@
 ---
 title: "Dynamic report"
 output: html_document
-
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
-pacman::p_load(tidyverse, plotly)
 ```
 
+# Cell survival counting
 
-# Cell survival counting 
-Comments: 
-```{r}
-cat(params$note)
-```
+## Notes:
 
-## Barplots
+`r params$note`
+
+### Barplots
 
 ```{r}
 params$df %>% 
   make_bar_plot()
 ```
 
-## Boxplots
+### Boxplots
 
 ```{r}
 params$df %>% 
