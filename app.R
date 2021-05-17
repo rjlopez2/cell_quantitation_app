@@ -180,7 +180,7 @@ server <- function(input, output) {
     
     output$downloadReport <- downloadHandler(
         filename = function() {
-            paste(paste('Counting_report', Sys.Date(), sep = "_"), sep = '.', switch(
+            paste(paste('CountingCells_report', Sys.Date(), sep = "_"), sep = '.', switch(
                 input$format, PDF = 'pdf', HTML = 'html', Word = 'docx'
             ))
         },
